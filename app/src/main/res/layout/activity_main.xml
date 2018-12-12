@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/lightOrange" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/food_cover" />
+
+
+    <!-- filter row start -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.3"
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp" />
+
+        <Switch
+            android:id="@+id/vegOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:switchPadding="5dp"
+            android:text="Veg only"
+            android:textColor="@color/green"
+            android:paddingLeft="30dp"
+            android:theme="@style/mySwitch1" />
+
+            <!--android:layout_marginTop="180dp"-->
+         <!--android:layout_marginLeft="50dp"-->
+
+        <Switch
+            android:id="@+id/containEgg"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:switchPadding="5dp"
+            android:paddingLeft="20dp"
+            android:text="Contains egg"
+            android:textColor="@color/black"
+            android:theme="@style/mySwitch2" />
+
+    </LinearLayout>
+
+    <!-- filter row end -->
+
+
+    <!--<ToggleButton-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_marginTop="250dp"-->
+    <!--android:layout_marginLeft="180dp" />-->
+
+
+    <ScrollView android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:paddingTop="1dp"
+        android:background="@drawable/cuisines"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--  dishes  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+<!--dish row 1-->
+            <LinearLayout
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textStyle="bold"
+                    android:text="Veg Cuisine1" />
+
+                <CheckBox
+                    android:id="@+id/cb1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:theme="@style/check"
+                    android:layout_marginLeft="80dp" />
+
+                <LinearLayout
+                    android:id="@+id/layer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/bt1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"/>
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="25dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/bt2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+<!--dish row 2-->
+            <LinearLayout
+                android:id="@+id/row2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/label2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textStyle="bold"
+                    android:text="Veg Cuisine2" />
+
+                <CheckBox
+                    android:id="@+id/cb2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:theme="@style/check"
+                    android:layout_marginLeft="80dp" />
+
+                <LinearLayout
+                    android:id="@+id/layer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/bt3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"/>
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="25dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/bt4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--dish row 3-->
+
+            <LinearLayout
+                android:id="@+id/row3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/label3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textStyle="bold"
+                    android:text="Non-Veg Cuisine1" />
+
+                <CheckBox
+                    android:id="@+id/cb3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:theme="@style/check"
+                    android:layout_marginLeft="49dp" />
+
+                <LinearLayout
+                    android:id="@+id/layer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bt5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"/>
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="25dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/bt6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--dish row 4-->
+
+            <LinearLayout
+                android:id="@+id/row4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/label4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textStyle="bold"
+                    android:text="Egg Cuisine1" />
+
+                <CheckBox
+                    android:id="@+id/cb4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:theme="@style/check"
+                    android:layout_marginLeft="80dp" />
+
+                <LinearLayout
+                    android:id="@+id/layer4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/bt7"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"/>
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="25dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/bt8"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+<!--dish row 5-->
+
+            <LinearLayout
+                android:id="@+id/row5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/label5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textStyle="bold"
+                    android:text="Non-Veg Cuisine2" />
+
+                <CheckBox
+                    android:id="@+id/cb5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:theme="@style/check"
+                    android:layout_marginLeft="49dp" />
+
+                <LinearLayout
+                    android:id="@+id/layer5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/bt9"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"/>
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        android:layout_width="25dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/bt10"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+<!--dish row 6-->
+
+            <LinearLayout
+                android:id="@+id/row6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/label6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textStyle="bold"
+                    android:text="Egg Cuisine2" />
+
+                <CheckBox
+                    android:id="@+id/cb6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:theme="@style/check"
+                    android:layout_marginLeft="80dp" />
+
+                <LinearLayout
+                    android:id="@+id/layer6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/bt11"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="+"/>
+
+                    <TextView
+                        android:id="@+id/tv6"
+                        android:layout_width="25dp"
+                        android:layout_height="40dp" />
+
+                    <Button
+                        android:id="@+id/bt12"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="-"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--make it like in zomato -->
+
+    </ScrollView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Place Order"
+        android:textColor="@color/white"
+        android:background="@color/green"/>
+
+</LinearLayout>
