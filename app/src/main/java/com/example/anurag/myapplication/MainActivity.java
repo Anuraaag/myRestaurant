@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tv1, tv2, tv3, tv4, tv5, tv6;                      // quantity
     TextView label1, label2, label3, label4, label5, label6;    // cuisine name
     Button bt1, bt2, bt3, bt4, bt5, bt6, bt7, bt8, bt9, bt10, bt11, bt12;
+    Button order;
     LinearLayout layer1, layer2, layer3, layer4, layer5, layer6;
     LinearLayout row1, row2, row3, row4, row5, row6;
 
@@ -82,6 +83,8 @@ public class MainActivity extends AppCompatActivity {
         bt10 = findViewById(R.id.bt10);
         bt11 = findViewById(R.id.bt11);
         bt12 = findViewById(R.id.bt12);
+
+        order = findViewById(R.id.order);
 
         layer1.setVisibility(View.GONE);
         layer2.setVisibility(View.GONE);
@@ -545,6 +548,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        order.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+
+                int quantity = 0;
+                String temp;
+                for(int i = 1; i <= 6; i += 1)
+                {
+                    temp = "cb".concat(String.valueOf(i));
+                    int id = getResources().getIdentifier(temp, "id", getPackageName());
+                    CheckBox cb = findViewById(id);
+
+                    if (cb.isChecked() )
+                    {
+                        temp = "tv".concat(String.valueOf(i));
+                        id = getResources().getIdentifier(temp, "id", getPackageName());
+                        TextView tv = findViewById(id);
+                        quantity += Integer.parseInt(tv.getText().toString());
+                    }
+                }
+                quantity *= 100;
+                temp = Integer.toString(quantity);
+//              temp = "" + quantity;
+                Toast.makeText(MainActivity.this, "Total amount \n Rs."+temp, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Confirming Order", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Order placed successfully", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
 
